@@ -14,7 +14,7 @@ const initServer = async () => {
 	app.use((_, res) => {
 		res.status(404).send({ message: "Rota não Encontrada!" });
 	});
-	app.listen(4000, () => {
+	app.listen(process.env.PORT || 4000, () => {
 		console.log("Server is Running on Port 4000");
 	});
 };
